@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.std_logic_1164.all;   
+use IEEE.std_logic_unsigned.all;
+use IEEE.numeric_std.all;
+entity downcounter is
+		port(Clk, Start: in std_logic;
+		Data_In0: in std_logic_vector(3 downto 0);
+		Data_In1: in std_logic_vector(3 downto 0);
+		Data_In2: in std_logic_vector(1 downto 0);
+		segments0 : out std_logic_vector(7 downto 0);
+		segments1 : out std_logic_vector(7 downto 0);
+		segments2 : out std_logic_vector(7 downto 0);
+		);
+end entity downcounter;
+
+architecture structural of downcounter is
+component BCDcounter is
+
+port (Clk, direction, enable,init : in std_logic;
+Q : out std_logic_vector(3 downto 0));
+
+end component BCDcounter;
+
+	
+end architecture structural;

@@ -1,0 +1,10 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+USE IEEE.std_logic_unsigned.all;
+use IEEE.numeric_std.all; 
+
+entity tbitcounter is
+ 	port (Clk: in STD_LOGIC;
+	digit: in std_logic_vector(1 downto 0);
+ 	Q : out  std_logic_vector(7 downto 0));
+ end entity tbitcounter;
